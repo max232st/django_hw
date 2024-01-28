@@ -1,0 +1,14 @@
+[INFO    :   django.utils.autoreload] - 2024-01-28 15:04:36,734 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-28 15:04:43,657 : log_message @ 0212: "GET / HTTP/1.1" 200 11
+[WARNING :            django.request] - 2024-01-28 15:05:06,359 : log_response @ 0241: Not Found: /main
+[WARNING :             django.server] - 2024-01-28 15:05:06,360 : log_message @ 0212: "GET /main HTTP/1.1" 404 2298
+[WARNING :            django.request] - 2024-01-28 15:05:40,158 : log_response @ 0241: Not Found: /about
+[WARNING :             django.server] - 2024-01-28 15:05:40,160 : log_message @ 0212: "GET /about HTTP/1.1" 404 2301
+[WARNING :            django.request] - 2024-01-28 15:05:46,438 : log_response @ 0241: Not Found: /main
+[WARNING :             django.server] - 2024-01-28 15:05:46,444 : log_message @ 0212: "GET /main HTTP/1.1" 404 2298
+[INFO    :             django.server] - 2024-01-28 15:05:53,448 : log_message @ 0212: "GET /myapp/main HTTP/1.1" 301 0
+[INFO    :             django.server] - 2024-01-28 15:05:53,458 : log_message @ 0212: "GET /myapp/main/ HTTP/1.1" 200 22
+[INFO    :             django.server] - 2024-01-28 15:05:58,543 : log_message @ 0212: "GET /myapp/about/ HTTP/1.1" 200 42
+[INFO    :   django.utils.autoreload] - 2024-01-28 15:06:19,576 : trigger_reload @ 0266: D:\Django\myapp\views.py changed, reloading.
+[INFO    :   django.utils.autoreload] - 2024-01-28 15:06:20,627 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-28 15:06:23,336 : log_message @ 0212: "GET /myapp/main/ HTTP/1.1" 200 31
