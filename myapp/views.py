@@ -2,6 +2,8 @@
 from django.http import HttpResponse
 import logging
 
+from myapp.models import Order
+
 logger = logging.getLogger(__name__)
 
 
@@ -24,3 +26,8 @@ def about(request):
     '''
     logger.info("Visit page about")
     return HttpResponse(about_descryption)
+
+
+def all_orders(request):
+    order = Order.objects.all()
+    return HttpResponse(order)

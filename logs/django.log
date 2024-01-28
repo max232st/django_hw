@@ -12,3 +12,8 @@
 [INFO    :   django.utils.autoreload] - 2024-01-28 15:06:19,576 : trigger_reload @ 0266: D:\Django\myapp\views.py changed, reloading.
 [INFO    :   django.utils.autoreload] - 2024-01-28 15:06:20,627 : run_with_reloader @ 0668: Watching for file changes with StatReloader
 [INFO    :             django.server] - 2024-01-28 15:06:23,336 : log_message @ 0212: "GET /myapp/main/ HTTP/1.1" 200 31
+[INFO    :   django.utils.autoreload] - 2024-01-28 15:20:19,993 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-28 15:20:38,962 : log_message @ 0212: "GET /myapp/all_orders HTTP/1.1" 301 0
+[INFO    :             django.server] - 2024-01-28 15:20:38,975 : log_message @ 0212: "GET /myapp/all_orders/ HTTP/1.1" 200 0
+[INFO    :   django.utils.autoreload] - 2024-01-28 15:21:33,413 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-28 15:21:35,874 : log_message @ 0212: "GET /myapp/all_orders/ HTTP/1.1" 200 141
