@@ -1,0 +1,15 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}
+    print
+{% endblock %}
+
+{% block content %}
+        {% for i in imgs %}
+            {{ i.name }}
+            <br>
+            <img src="{{ i.img.url }}" width="300px" heigth="300px">
+            <br>
+        {% endfor %}
+        <br>
+{% endblock %}

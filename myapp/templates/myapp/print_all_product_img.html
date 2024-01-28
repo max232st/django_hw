@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}
+    print_all_product_img
+{% endblock %}
+
+{% block content %}
+        {% for i in all_product %}
+            {{ i.name_product }}
+            {{i.description }}
+            {{i.price }}
+            {{i.count_product }}
+            {{i.date_add_product }}
+            <img src="{{ i.product_img.url }}" width="300px" heigth="300px">
+        {% endfor %}
+        <br>
+
+{% endblock %}

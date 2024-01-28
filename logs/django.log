@@ -33,3 +33,33 @@
 [INFO    :             django.server] - 2024-01-28 15:48:56,129 : log_message @ 0212: "GET /myapp/orders_order_by/1/30 HTTP/1.1" 200 1055
 [INFO    :   django.utils.autoreload] - 2024-01-28 16:57:58,220 : run_with_reloader @ 0668: Watching for file changes with StatReloader
 [INFO    :             django.server] - 2024-01-28 16:57:58,444 : log_message @ 0212: "GET /myapp/orders_order_by/1/365 HTTP/1.1" 200 1056
+[INFO    :   django.utils.autoreload] - 2024-01-28 18:47:48,091 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-28 18:54:05,601 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[WARNING :            django.request] - 2024-01-28 18:54:20,607 : log_response @ 0241: Not Found: /myapp/add_product
+[WARNING :             django.server] - 2024-01-28 18:54:20,608 : log_message @ 0212: "GET /myapp/add_product HTTP/1.1" 404 5498
+[WARNING :            django.request] - 2024-01-28 18:54:52,338 : log_response @ 0241: Not Found: /myapp/all_orders
+[WARNING :             django.server] - 2024-01-28 18:54:52,340 : log_message @ 0212: "GET /myapp/all_orders HTTP/1.1" 404 5494
+[WARNING :            django.request] - 2024-01-28 18:55:12,069 : log_response @ 0241: Not Found: /myapp/index_extend_base
+[WARNING :             django.server] - 2024-01-28 18:55:12,070 : log_message @ 0212: "GET /myapp/index_extend_base HTTP/1.1" 404 5522
+[INFO    :   django.utils.autoreload] - 2024-01-28 18:55:55,527 : trigger_reload @ 0266: D:\Django\homeworks\urls.py changed, reloading.
+[INFO    :   django.utils.autoreload] - 2024-01-28 18:55:56,518 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[WARNING :            django.request] - 2024-01-28 18:55:59,974 : log_response @ 0241: Not Found: /myapp/index_extend_base
+[WARNING :             django.server] - 2024-01-28 18:55:59,976 : log_message @ 0212: "GET /myapp/index_extend_base HTTP/1.1" 404 5522
+[INFO    :   django.utils.autoreload] - 2024-01-28 18:58:40,559 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[WARNING :            django.request] - 2024-01-28 18:58:42,833 : log_response @ 0241: Not Found: /myapp/main
+[WARNING :             django.server] - 2024-01-28 18:58:42,835 : log_message @ 0212: "GET /myapp/main HTTP/1.1" 404 5470
+[INFO    :   django.utils.autoreload] - 2024-01-28 19:01:38,583 : trigger_reload @ 0266: D:\Django\homeworks\settings.py changed, reloading.
+[INFO    :   django.utils.autoreload] - 2024-01-28 19:01:39,508 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :   django.utils.autoreload] - 2024-01-28 19:02:39,838 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-28 19:02:41,241 : log_message @ 0212: "GET /myapp/main HTTP/1.1" 301 0
+[INFO    :             django.server] - 2024-01-28 19:02:41,252 : log_message @ 0212: "GET /myapp/main/ HTTP/1.1" 200 31
+[INFO    :             django.server] - 2024-01-28 19:03:19,350 : log_message @ 0212: "GET /myapp/print_meta_product_img HTTP/1.1" 200 303
+[INFO    :             django.server] - 2024-01-28 19:03:30,165 : log_message @ 0212: "GET /myapp/add_product HTTP/1.1" 301 0
+[INFO    :             django.server] - 2024-01-28 19:03:30,253 : log_message @ 0212: "GET /myapp/add_product/ HTTP/1.1" 200 1180
+[INFO    :             django.server] - 2024-01-28 19:04:40,782 : log_message @ 0212: "POST /myapp/add_product/ HTTP/1.1" 200 1226
+[INFO    :             django.server] - 2024-01-28 19:05:00,549 : log_message @ 0212: "GET /myapp/product_with_img HTTP/1.1" 301 0
+[INFO    :             django.server] - 2024-01-28 19:05:00,574 : log_message @ 0212: "GET /myapp/product_with_img/ HTTP/1.1" 200 1390
+[INFO    :             django.server] - 2024-01-28 19:05:57,596 : log_message @ 0212: "POST /myapp/product_with_img/ HTTP/1.1" 200 1435
+[INFO    :             django.server] - 2024-01-28 19:06:11,759 : log_message @ 0212: "GET /myapp/print_all_product_img HTTP/1.1" 301 0
+[INFO    :             django.server] - 2024-01-28 19:06:11,807 : log_message @ 0212: "GET /myapp/print_all_product_img/ HTTP/1.1" 200 510
+[INFO    :             django.server] - 2024-01-28 19:06:12,186 : log_message @ 0212: "GET /media/django.jpg HTTP/1.1" 200 32067

@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 import logging
-from myapp.models import Order, Client
 from django.utils import timezone
-from datetime import datetime, date, time, timedelta
+from datetime import timedelta
+from myapp.models import Order, Client, Product, ProductImg
+from .forms import EditorProduct, AddProduct, DelProduct, ProductWithImgForm
+from django.core.files.storage import FileSystemStorage
 
 logger = logging.getLogger(__name__)
 
@@ -106,3 +108,111 @@ def orders_order_by(request, client_id, count_day):
             'client': client,
             'list_filter_orders': list_filter_orders,
         })
+
+
+# Home work 4
+
+#  Измените модель продукта, добавьте поле для хранения фотографии продукта.
+#  Создайте форму, которая позволит сохранять фото.
+
+
+# добавить новый продукт
+def add_product(request):
+    if request.method == 'POST':
+        form = AddProduct(request.POST)
+        if form.is_valid():
+            # name_product = form.cleaned_data['name_product']
+            # description = form.cleaned_data['description']
+            # price = form.cleaned_data['price']
+            # count_product = form.cleaned_data['count_product']
+            # product = Product(name_product=name_product,
+            #                   description=description,
+            #                   price=price,
+            #                   count_product=count_product)
+            # product.save()
+            form.save()
+            # в случаи с 'Class Meta'!
+    else:
+        form = EditorProduct()
+
+    return render(request, 'myapp/editor_product.html', {'form': form})
+
+
+# Редактировать продукт указав его id
+def editor_product(request, product_id):
+    if request.method == 'POST':
+        form = EditorProduct(request.POST)
+        if form.is_valid():
+            product = Product.objects.get(pk=product_id)
+            product.name_product = form.cleaned_data['name_product']
+            product.description = form.cleaned_data['description']
+            product.price = form.cleaned_data['price']
+            product.count_product = form.cleaned_data['count_product']
+            product.save()
+    else:
+        form = EditorProduct()
+    return render(request, 'myapp/editor_product.html', {'form': form})
+
+
+# Удалить продукт по id
+def del_product(request):
+    if request.method == 'POST':
+        form = DelProduct(request.POST)
+        if form.is_valid():
+            product_id = form.cleaned_data['product_id']
+            Product.objects.filter(pk=product_id).delete()
+    form = DelProduct()
+    return render(request, 'myapp/del_product.html', {'form': form})
+
+
+# сохранение в БД продукта с картинкой
+def product_with_img(request):
+    if request.method == 'POST':
+        form = ProductWithImgForm(request.POST, request.FILES)
+        if form.is_valid():
+            name_product = form.cleaned_data['name_product']
+            description = form.cleaned_data['description']
+            price = form.cleaned_data['price']
+            count_product = form.cleaned_data['count_product']
+            product_img = form.cleaned_data['product_img']
+            fs = FileSystemStorage()
+            filename = fs.save(product_img.name, product_img)
+            # file_url = fs.url(filename)  путь к файлу
+            product = ProductImg(name_product=name_product,
+                                 description=description,
+                                 price=price,
+                                 count_product=count_product,
+                                 product_img=filename)
+            product.save()
+    else:
+        form = ProductWithImgForm()
+    return render(request, 'myapp/product_with_img.html', {'form': form})
+
+
+# выгрузка в шаблоны БД с media картинкамии
+def print_all_product_img(request):
+    all_product = ProductImg.objects.all()
+    return render(request, 'myapp/print_all_product_img.html',
+                  {'all_product': all_product})
+
+
+# загрузка и выгрузка через класс "CreateView"
+from django.views.generic import CreateView
+from .models import MetaProductImg
+from .forms import FormMetaProductImg
+
+
+# загузка
+class AddMetaProductImg(CreateView):
+    model = MetaProductImg
+    form_class = FormMetaProductImg
+    template_name = 'myapp/add_meta_product_img.html'
+    success_url = 'add_meta_product_img'
+
+
+# выгрузка
+class ReadMetaProductImg(CreateView):
+    model = MetaProductImg
+    form_class = FormMetaProductImg
+    extra_context = {'imgs': MetaProductImg.objects.all()}
+    template_name = 'myapp/print_meta_product_img.html'
