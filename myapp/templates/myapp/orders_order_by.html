@@ -1,0 +1,39 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}
+client_all_products
+{% endblock %}
+
+{% block content %}
+<center>
+    <h1>Все заказы и их товары клиента - '{{client.name}}<br> за последние {{ count_day }} дней:</h1>
+    <h1>
+
+        {% for order in list_filter_orders %}
+        <table border='1'>
+            <tr>
+                <th>number order</th>
+                <th>date order</th>
+                <th>summa order</th>
+                <th>list products</th>
+            </tr>
+            <tr>
+                <td>
+                    {{ order.pk }}
+                </td>
+                <td>
+                    {{ order.date_order }}
+                </td>
+                <td>
+                    {{ order.summ_price_order }}
+                </td>
+                <td>
+                    {{ order.products }}
+                </td>
+            </tr>
+        </table>
+        <br>
+        {% endfor %}
+    </h1>
+</center>
+{% endblock %}

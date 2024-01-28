@@ -17,3 +17,19 @@
 [INFO    :             django.server] - 2024-01-28 15:20:38,975 : log_message @ 0212: "GET /myapp/all_orders/ HTTP/1.1" 200 0
 [INFO    :   django.utils.autoreload] - 2024-01-28 15:21:33,413 : run_with_reloader @ 0668: Watching for file changes with StatReloader
 [INFO    :             django.server] - 2024-01-28 15:21:35,874 : log_message @ 0212: "GET /myapp/all_orders/ HTTP/1.1" 200 141
+[INFO    :   django.utils.autoreload] - 2024-01-28 15:44:58,075 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-28 15:45:01,750 : log_message @ 0212: "GET /myapp/all_orders/ HTTP/1.1" 200 141
+[INFO    :             django.server] - 2024-01-28 15:45:19,307 : log_message @ 0212: "GET /myapp/client_orders/1 HTTP/1.1" 200 391
+[INFO    :             django.server] - 2024-01-28 15:45:22,070 : log_message @ 0212: "GET /myapp/order/1 HTTP/1.1" 200 1407
+[INFO    :             django.server] - 2024-01-28 15:45:50,475 : log_message @ 0212: "GET /myapp/client_orders/1 HTTP/1.1" 200 391
+[INFO    :             django.server] - 2024-01-28 15:46:01,023 : log_message @ 0212: "GET /myapp/client_all_products/1 HTTP/1.1" 200 1013
+[INFO    :             django.server] - 2024-01-28 15:46:08,439 : log_message @ 0212: "GET /myapp/client_all_products/1 HTTP/1.1" 200 1013
+[WARNING :            django.request] - 2024-01-28 15:46:22,777 : log_response @ 0241: Not Found: /myapp/orders_order_by/1
+[WARNING :             django.server] - 2024-01-28 15:46:22,779 : log_message @ 0212: "GET /myapp/orders_order_by/1 HTTP/1.1" 404 3835
+[INFO    :             django.server] - 2024-01-28 15:46:47,620 : log_message @ 0212: "GET /myapp/orders_order_by/1/28 HTTP/1.1" 200 1055
+[INFO    :             django.server] - 2024-01-28 15:46:52,134 : log_message @ 0212: "GET /myapp/orders_order_by/1/1 HTTP/1.1" 200 1054
+[INFO    :   django.utils.autoreload] - 2024-01-28 15:48:38,671 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-28 15:48:48,765 : log_message @ 0212: "GET /myapp/orders_order_by/1/7 HTTP/1.1" 200 1054
+[INFO    :             django.server] - 2024-01-28 15:48:56,129 : log_message @ 0212: "GET /myapp/orders_order_by/1/30 HTTP/1.1" 200 1055
+[INFO    :   django.utils.autoreload] - 2024-01-28 16:57:58,220 : run_with_reloader @ 0668: Watching for file changes with StatReloader
+[INFO    :             django.server] - 2024-01-28 16:57:58,444 : log_message @ 0212: "GET /myapp/orders_order_by/1/365 HTTP/1.1" 200 1056

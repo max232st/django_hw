@@ -1,0 +1,41 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}
+base
+{% endblock %}
+{% block content %}
+<center>
+    <h1>Содержимое заказа:</h1>
+    <h1>Заказ номер - {{ order_id }}:</h1>
+    <h2>Имя клиента : {{ client }}</h2>
+    <h2>Дата и время заказа: {{ order_date }}</h2>
+    <h2>Список товаров:</h2>
+    <table border='2'>
+        <tr>
+            <th>
+                Наименование товара
+            </th>
+            <th>
+                Цена товара
+            </th>
+        </tr>
+        <tr>
+            <td>
+                {% for product in order_products %}
+                {{ product.name_product }}
+                <br>
+                {% endfor %}
+            </td>
+            <td>
+                {% for product in order_products %}
+                {{ product.price }}
+                <br>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+    <h2>Количество товара в заказе: {{order_products.count}}</h2>
+    <h2>Сумма заказа составляет: {{ summ_price_order }}</h2>
+
+</center>
+{% endblock %}
